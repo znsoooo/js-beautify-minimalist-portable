@@ -68,9 +68,9 @@ function run_tests() {
 
 function read_settings_from_cookie() {
   $('#tabsize').val(any(Cookies.get('tabsize'), '4'));
-  $('#brace-style').val(any(Cookies.get('brace-style'), 'collapse'));
+  $('#brace-style').val(any(Cookies.get('brace-style'), 'expand'));
   $('#detect-packers').prop('checked', Cookies.get('detect-packers') !== 'off');
-  $('#max-preserve-newlines').val(any(Cookies.get('max-preserve-newlines'), '5'));
+  $('#max-preserve-newlines').val(any(Cookies.get('max-preserve-newlines'), '2'));
   $('#keep-array-indentation').prop('checked', Cookies.get('keep-array-indentation') === 'on');
   $('#break-chained-methods').prop('checked', Cookies.get('break-chained-methods') === 'on');
   $('#indent-scripts').val(any(Cookies.get('indent-scripts'), 'normal'));
@@ -79,7 +79,7 @@ function read_settings_from_cookie() {
   $('#wrap-line-length').val(any(Cookies.get('wrap-line-length'), '0'));
   $('#unescape-strings').prop('checked', Cookies.get('unescape-strings') === 'on');
   $('#jslint-happy').prop('checked', Cookies.get('jslint-happy') === 'on');
-  $('#end-with-newline').prop('checked', Cookies.get('end-with-newline') === 'on');
+  $('#end-with-newline').prop('checked', Cookies.get('end-with-newline') !== 'off');
   $('#indent-inner-html').prop('checked', Cookies.get('indent-inner-html') === 'on');
   $('#comma-first').prop('checked', Cookies.get('comma-first') === 'on');
   $('#e4x').prop('checked', Cookies.get('e4x') === 'on');
